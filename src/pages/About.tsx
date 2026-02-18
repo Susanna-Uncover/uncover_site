@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import susannaBw from "@/assets/susanna-bw.jpg";
+import aboutAbstract from "@/assets/about-abstract.jpg";
 import { Briefcase, GraduationCap, Award, Globe, Mail, Linkedin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -91,8 +91,8 @@ const About = () => (
     <section className="section-padding pt-28 pb-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10">
         <img
-          src={susannaBw}
-          alt="Susanna Tatevosyan"
+          src={aboutAbstract}
+          alt="Data analytics abstract illustration"
           className="w-56 h-56 md:w-72 md:h-72 rounded-2xl object-cover shrink-0 border border-border"
         />
         <div>
