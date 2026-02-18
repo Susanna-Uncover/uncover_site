@@ -5,7 +5,6 @@ import { BarChart3, Search, PieChart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import aboutAbstract from "@/assets/about-abstract.jpg";
 
-
 const services = [
   {
     icon: Search,
@@ -31,37 +30,39 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding flex flex-col justify-center min-h-[80vh]">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="max-w-3xl flex-1">
-            <p className="text-primary font-medium text-sm mb-4 tracking-widest uppercase">
-              Insight Consultant &amp; Data Analyst
-            </p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Hello, I'm{" "}
-              <span className="text-gradient">Susanna</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-              I help organisations make smarter decisions through data analytics,
-              market research, and compelling data visualisation. Independent
-              researcher turning complexity into clarity.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg">
-                <Link to="/portfolio">
-                  View My Work <ArrowRight size={16} className="ml-2" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/contact">Get in Touch</Link>
-              </Button>
+      <section className="section-padding pt-28 min-h-[80vh] flex items-center">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1">
+              <p className="text-primary font-medium text-sm mb-4 tracking-widest uppercase">
+                Insight Consultant &amp; Data Analyst
+              </p>
+              <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight mb-6">
+                Hello, I'm{" "}
+                <span className="text-gradient">Susanna</span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+                I help organisations make smarter decisions through data analytics,
+                market research, and compelling data visualisation. Independent
+                researcher turning complexity into clarity.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg">
+                  <Link to="/portfolio">
+                    View My Work <ArrowRight size={16} className="ml-2" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/contact">Get in Touch</Link>
+                </Button>
+              </div>
             </div>
+            <img
+              src={aboutAbstract}
+              alt="Abstract data analytics illustration"
+              className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shrink-0 border border-border"
+            />
           </div>
-          <img
-            src={aboutAbstract}
-            alt="Abstract data analytics illustration"
-            className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shrink-0 border border-border"
-          />
         </div>
       </section>
 
