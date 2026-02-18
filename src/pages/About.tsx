@@ -102,7 +102,7 @@ const About = () => (
           </h1>
           <p className="text-primary font-medium mb-4">Data Analyst & Insight Consultant</p>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mb-6">
-            Data analyst with hands-on experience in Python, SQL, R, and visualisation tools (Tableau, Power BI),
+            Data analyst with hands-on experience in Python, SQL, and visualisation tools (Tableau, Power BI),
             backed by 10+ years translating complex data into actionable business recommendations.
             MSc in Computer Science with Data Analytics. Background in commercial research provides
             a strong foundation in problem framing, stakeholder communication, and delivering insight
