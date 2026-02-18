@@ -39,7 +39,7 @@ const Index = () => {
               </p>
               <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight mb-6">
                 Hello, I'm{" "}
-                <span className="text-gradient">Susanna</span>
+                <span className="text-primary">Susanna Tatevosyan</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
                 I help organisations make smarter decisions through data analytics,
