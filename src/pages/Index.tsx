@@ -30,28 +30,33 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <section className="section-padding flex flex-col justify-center min-h-[80vh]">
-        <div className="max-w-3xl">
-          <p className="text-primary font-medium text-sm mb-4 tracking-widest uppercase">
-            Insight Consultant &amp; Data Analyst
-          </p>
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight mb-6">
-            Hello, I'm{" "}
-            <span className="text-gradient">Susanna</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-            I help organisations make smarter decisions through data analytics,
-            market research, and compelling data visualisation. Independent
-            researcher turning complexity into clarity.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg">
-              <Link to="/portfolio">
-                View My Work <ArrowRight size={16} className="ml-2" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/about">About Me</Link>
-            </Button>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="max-w-3xl flex-1">
+            <p className="text-primary font-medium text-sm mb-4 tracking-widest uppercase">
+              Insight Consultant &amp; Data Analyst
+            </p>
+            <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight mb-6">
+              Hello, I'm{" "}
+              <span className="text-gradient">Susanna</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+              I help organisations make smarter decisions through data analytics,
+              market research, and compelling data visualisation. Independent
+              researcher turning complexity into clarity.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg">
+                <Link to="/portfolio">
+                  View My Work <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/contact">Get in Touch</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm shrink-0">
+            Your photo here
           </div>
         </div>
       </section>
