@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import susannaBw from "@/assets/susanna-bw.jpg";
-import { Briefcase, GraduationCap, Award } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Linkedin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
@@ -102,6 +102,14 @@ const About = () => (
             a strong foundation in problem framing, stakeholder communication, and delivering insight
             that drives decisions.
           </p>
+          <a
+            href="https://www.linkedin.com/in/susanna-tatevosyan-b17ab081/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Linkedin size={16} /> LinkedIn
+          </a>
         </div>
       </div>
     </section>
