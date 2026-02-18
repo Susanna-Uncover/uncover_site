@@ -60,7 +60,7 @@ const Index = () => {
             <img
               src={aboutAbstract}
               alt="Abstract data analytics illustration"
-              className="w-full md:w-96 lg:w-[480px] h-48 md:h-64 lg:h-72 rounded-2xl object-cover shrink-0 border border-border"
+              className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shrink-0 border border-border"
             />
           </div>
         </div>
