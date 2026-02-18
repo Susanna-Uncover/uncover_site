@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import aboutAbstract from "@/assets/about-abstract.jpg";
-import { Briefcase, GraduationCap, Award, Globe, Mail, Linkedin } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Mail, Linkedin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
@@ -78,12 +78,6 @@ const certifications = [
   "Google – AI Leadership",
 ];
 
-const languages = [
-  { lang: "English", level: "Fluent" },
-  { lang: "Estonian", level: "Fluent" },
-  { lang: "Russian", level: "Fluent" },
-  { lang: "Spanish", level: "Conversational" },
-];
 
 const About = () => (
   <Layout>
@@ -214,23 +208,6 @@ const About = () => (
       </div>
     </section>
 
-    {/* Languages */}
-    <section className="section-padding py-12">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 mb-6">
-          <Globe size={24} className="text-primary" />
-          <h2 className="font-display text-3xl font-bold">Languages</h2>
-        </div>
-        <div className="flex flex-wrap gap-6">
-          {languages.map((l) => (
-            <div key={l.lang} className="text-center">
-              <p className="font-display font-semibold text-lg">{l.lang}</p>
-              <p className="text-muted-foreground text-xs uppercase tracking-wider">{l.level}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
   </Layout>
 );
 
