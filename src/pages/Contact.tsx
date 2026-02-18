@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Linkedin } from "lucide-react";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -74,14 +74,6 @@ const Contact = () => {
             </Button>
           </form>
 
-          <div className="flex flex-col gap-4 text-sm text-muted-foreground">
-            <a href="mailto:susanna.tatevosyan@uncoverit.co.uk" className="flex items-center gap-3 hover:text-primary transition-colors">
-              <Mail size={18} /> susanna.tatevosyan@uncoverit.co.uk
-            </a>
-            <a href="https://www.linkedin.com/in/susanna-tatevosyan-b17ab081/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary transition-colors">
-              <Linkedin size={18} /> LinkedIn Profile
-            </a>
-          </div>
         </div>
       </section>
     </Layout>
