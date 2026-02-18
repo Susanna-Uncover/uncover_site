@@ -4,7 +4,7 @@ import { Mail, Linkedin } from "lucide-react";
 const Contact = () => {
   return (
     <Layout>
-      <section className="section-padding pt-28 min-h-[60vh]">
+      <section className="section-padding pt-28 min-h-[70vh]">
         <div className="max-w-6xl mx-auto">
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">
             Contact
