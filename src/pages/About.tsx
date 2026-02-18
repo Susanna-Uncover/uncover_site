@@ -4,9 +4,10 @@ import { Briefcase, GraduationCap, Award, Globe, Mail, Linkedin } from "lucide-r
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
-  "Python", "SQL", "R", "Tableau", "Power BI",
+  "Python", "SQL", "Tableau", "Power BI",
   "Data Cleaning & Transformation", "Statistical Analysis",
-  "Survey Design & Quantitative Analysis", "Insight Synthesis & Reporting",
+  "Survey Design & Quantitative Analysis", "Qualitative Research Methodologies",
+  "Insight Synthesis & Reporting", "Presenting & Storytelling",
   "End-to-end Project Delivery", "Client & Stakeholder Management",
 ];
 
@@ -92,7 +93,7 @@ const About = () => (
         <img
           src={susannaBw}
           alt="Susanna Tatevosyan"
-          className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover shrink-0 border border-border"
+          className="w-56 h-56 md:w-72 md:h-72 rounded-2xl object-cover shrink-0 border border-border"
         />
         <div>
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">About Me</p>
