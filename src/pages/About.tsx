@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import susannaBw from "@/assets/susanna-bw.jpg";
-import { Briefcase, GraduationCap, Award, Linkedin } from "lucide-react";
+import { Briefcase, GraduationCap, Award, Linkedin, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const skills = [
@@ -109,6 +109,14 @@ const About = () => (
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Linkedin size={16} /> LinkedIn
+          </a>
+          <a
+            href="https://github.com/susannatat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Github size={16} /> GitHub
           </a>
         </div>
       </div>
