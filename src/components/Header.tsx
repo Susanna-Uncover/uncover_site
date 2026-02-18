@@ -7,6 +7,7 @@ const navItems = [
   { label: "About", path: "/about" },
   { label: "Portfolio", path: "/portfolio" },
   { label: "Visualisations", path: "/visualisations" },
+  { label: "Get in Touch", path: "/contact" },
 ];
 
 const Header = () => {
@@ -16,7 +17,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display text-xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight text-foreground">
+          <div className="w-9 h-9 rounded-md bg-muted border border-border flex items-center justify-center text-xs text-muted-foreground">Logo</div>
           uncover<span className="text-primary">it</span>
         </Link>
 
