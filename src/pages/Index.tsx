@@ -3,7 +3,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Link } from "react-router-dom";
 import { BarChart3, Search, PieChart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import susannaBw from "@/assets/susanna-bw.jpg";
+import aboutAbstract from "@/assets/about-abstract.jpg";
 
 
 const services = [
@@ -58,8 +58,8 @@ const Index = () => {
             </div>
           </div>
           <img
-            src={susannaBw}
-            alt="Susanna Tatevosyan"
+            src={aboutAbstract}
+            alt="Abstract data analytics illustration"
             className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover shrink-0 border border-border"
           />
         </div>
