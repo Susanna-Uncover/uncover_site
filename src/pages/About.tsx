@@ -162,10 +162,9 @@ const About = () => (
               <span className="text-xs text-primary font-medium tracking-wider uppercase">{job.period}</span>
               <h3 className="font-display text-xl font-semibold mt-1">{job.title}</h3>
               <p className="text-muted-foreground text-sm mb-3">{job.company}</p>
-              <ul className="space-y-2">
+              <ul className="space-y-2 list-disc list-outside ml-4">
                 {job.bullets.map((b, j) => (
-                  <li key={j} className="text-muted-foreground text-sm leading-relaxed flex gap-2">
-                    <span className="text-primary mt-1.5 shrink-0">•</span>
+                  <li key={j} className="text-muted-foreground text-sm leading-relaxed pl-1">
                     {b}
                   </li>
                 ))}
