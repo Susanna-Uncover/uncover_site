@@ -91,8 +91,8 @@ const About = () => (
         />
         <div>
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">About Me</p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Susanna <span className="text-gradient">Tatevosyan</span>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4 text-white">
+            Susanna Tatevosyan
           </h1>
           <p className="text-primary font-medium mb-4">Data Analyst & Insight Consultant</p>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mb-6">
