@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoU from "@/assets/logo-u-white.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -18,8 +19,10 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight text-foreground">
-          <div className="w-9 h-9 rounded-md bg-muted border border-border flex items-center justify-center text-xs text-muted-foreground">Logo</div>
-          uncover<span className="text-primary">it</span>
+          <div className="w-9 h-9 rounded-md bg-primary flex items-center justify-center">
+            <img src={logoU} alt="Uncover logo" className="w-6 h-6 object-contain" />
+          </div>
+          uncover
         </Link>
 
         {/* Desktop nav */}
