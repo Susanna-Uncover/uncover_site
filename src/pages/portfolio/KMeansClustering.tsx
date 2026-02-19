@@ -231,7 +231,7 @@ df['TotalSpend'] = df['Wines'] + df['Fruits'] + df['Meat'] + df['Fish'] + df['Sw
         {/* Normalisation and Clustering */}
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">4. Data Normalisation and Clustering</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          First, I need to perform z-score normalisation or standardisation on the shortened data frame. By applying z-score normalisation, I have ensured that each feature in the dataset has a mean of 0 and a standard deviation of 1, which can be beneficial for machine learning.
+          First, I need to perform z-score normalisation or standardisation on the shortened data frame. By applying z-score normalisation, I have ensured that each feature in the dataset has a mean of 0 and a standard deviation of 1, which is essential for K-means since the algorithm is distance-based and sensitive to differences in feature scales.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
           Using the fit_transform() method of the scaler object I have fitted the scaler to the data and transformed it simultaneously. This process computed the mean and standard deviation of each feature in the dataset and then standardises the features by subtracting the mean and dividing by the standard deviation.
