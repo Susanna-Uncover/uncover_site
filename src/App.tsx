@@ -13,6 +13,7 @@ import GoodreadsSQL from "./pages/portfolio/GoodreadsSQL";
 import SeattleCollisions from "./pages/portfolio/SeattleCollisions";
 import ParfumoScraping from "./pages/portfolio/ParfumoScraping";
 import KMeansClustering from "./pages/portfolio/KMeansClustering";
+import OralClassification from "./pages/portfolio/OralClassification";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/portfolio/seattle-collisions" element={<SeattleCollisions />} />
           <Route path="/portfolio/parfumo-scraping" element={<ParfumoScraping />} />
           <Route path="/portfolio/kmeans-clustering" element={<KMeansClustering />} />
+          <Route path="/portfolio/oral-classification" element={<OralClassification />} />
           <Route path="/portfolio/:slug" element={<ProjectDetail />} />
           <Route path="/visualisations/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
