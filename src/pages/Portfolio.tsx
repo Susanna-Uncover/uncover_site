@@ -1,9 +1,9 @@
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
-import { Database } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 const projects = [
-  { title: "Cleaning Goodreads Data for Top Sci-Fi Recommendations", slug: "goodreads-sql", tag: "SQL", icon: Database },
+  { title: "Cleaning Goodreads Data for Top Sci-Fi Recommendations", slug: "goodreads-sql", tag: "SQL", icon: BookOpen },
   { title: "Project 2", slug: "portfolio-2" },
   { title: "Project 3", slug: "portfolio-3" },
   { title: "Project 4", slug: "portfolio-4" },
