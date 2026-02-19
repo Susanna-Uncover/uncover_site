@@ -6,7 +6,7 @@ const projects = [
   { title: "Cleaning Goodreads Data for Top Sci-Fi Recommendations", slug: "goodreads-sql", tag: "SQL", icon: BookOpen },
   { title: "Exploring and Visualising the Seattle Collision Data", slug: "seattle-collisions", tag: "SQL, Tableau", icon: Car },
   { title: "BeautifulSoup for Web Scraping to Analyse Perfume Trends", slug: "parfumo-scraping", tag: "Python", icon: FlaskConical },
-  { title: "Customer Segmentation Using K-means Clustering", slug: "kmeans-clustering", tag: "Python", icon: Users },
+  { title: "Customer Segmentation Using K-means Clustering", slug: "kmeans-clustering", tag: "Python, K-means", icon: Users },
   { title: "Creating an Oral Disease Classification Model", slug: "oral-classification", tag: "Python, SVC", icon: ScanEye },
   { title: "Project 6", slug: "portfolio-6" },
 ];
