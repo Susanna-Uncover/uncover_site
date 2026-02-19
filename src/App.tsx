@@ -9,6 +9,7 @@ import Portfolio from "./pages/Portfolio";
 import Visualisations from "./pages/Visualisations";
 import Contact from "./pages/Contact";
 import ProjectDetail from "./pages/ProjectDetail";
+import GoodreadsSQL from "./pages/portfolio/GoodreadsSQL";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/visualisations" element={<Visualisations />} />
+          <Route path="/portfolio/goodreads-sql" element={<GoodreadsSQL />} />
           <Route path="/portfolio/:slug" element={<ProjectDetail />} />
           <Route path="/visualisations/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
