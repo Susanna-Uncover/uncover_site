@@ -223,8 +223,7 @@ for link in perfume_links:
     except Exception as e:
         print(f'Error scraping data for {link}: {e}')`}</CodeBlock>
 
-        <Screenshot src={scrapingOutput1} alt="Scraping output showing successful data collection" />
-        <Screenshot src={scrapingOutput2} alt="Scraping output continued" />
+        <Screenshot src={scrapingOutput2} alt="Scraping output showing successful data collection" />
 
         <CodeBlock>{`# Saving the data to the CSV file
 
