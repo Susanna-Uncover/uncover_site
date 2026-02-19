@@ -249,6 +249,8 @@ pipe.score(x_test, y_test)`}</CodeBlock>
 
         <CodeBlock>{`param_grid = {
     'svc__kernel': ['rbf', 'linear'],
+    'svc__C': [1, 10],
+    'svc__gamma': [0.01, 0.1]
 }`}</CodeBlock>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
