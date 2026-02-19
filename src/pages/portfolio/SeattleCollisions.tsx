@@ -29,6 +29,16 @@ const Screenshot = ({ src, alt }: { src: string; alt: string }) => (
   </div>
 );
 
+const SmallScreenshot = ({ src, alt }: { src: string; alt: string }) => (
+  <div className="my-8">
+    <img
+      src={src}
+      alt={alt}
+      className="w-full max-w-[24rem] mx-auto rounded-xl border border-border"
+    />
+  </div>
+);
+
 const SeattleCollisions = () => (
   <Layout>
     <section className="section-padding pt-28 min-h-[70vh]">
@@ -107,7 +117,7 @@ const SeattleCollisions = () => (
 SELECT count(*)
 FROM PortfolioProject.dbo.SeattleCollision`}</CodeBlock>
 
-        <Screenshot src={countQuery} alt="Count query result" />
+        <SmallScreenshot src={countQuery} alt="Count query result" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           Date and time formatting of this dataset is somewhat flawed. The date column can be fixed quite easily by converting it into a DATE format in SQL, however, the time column float contains values that represent time in fractional hours (e.g., 13.6833333333333).
@@ -154,7 +164,7 @@ END;`}</CodeBlock>
           Luckily, all of the data was gathered within the same area, so I have created a table capturing the sunrise and sunset times on the 15th of every month to account for seasonal variation and daylight saving time.
         </p>
 
-        <Screenshot src={sunriseSunset} alt="Sunrise and sunset times table" />
+        <SmallScreenshot src={sunriseSunset} alt="Sunrise and sunset times table" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           Then, I have created a function, FINDTIMEOFDAY, which determines whether a collision occurred during daylight or nighttime based on the collision date and time from the SeattleSunriseSunset table. The results are then saved in a column called TIMEOFDAY.
@@ -226,13 +236,13 @@ FROM PortfolioProject.dbo.SeattleCollision
 GROUP BY YEAR(DATE_UPD)
 ORDER BY COLLISIONS_PER_YEAR DESC;`}</CodeBlock>
 
-        <Screenshot src={collisionsPerYear} alt="Collisions per year results" />
+        <SmallScreenshot src={collisionsPerYear} alt="Collisions per year results" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           Using a similar method, I have determined that October, June and July are the months when the highest number of collisions happen.
         </p>
 
-        <Screenshot src={collisionsPerMonth} alt="Collisions per month results" />
+        <SmallScreenshot src={collisionsPerMonth} alt="Collisions per month results" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           Next, I have reviewed the number of collisions that resulted in injuries vs fatalities:
