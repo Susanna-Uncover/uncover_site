@@ -259,7 +259,7 @@ dim_ds.describe().T`}</CodeBlock>
           Then, I needed to determine the number of clusters that would be used, since K-means requires a specific number of clusters to split the data. This can be achieved using the elbow method.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          The elbow method is a technique for finding the optimal number of clusters in a dataset for clustering algorithms like K-means. It involves plotting the variance explained against the number of clusters and identifying the 'elbow point,' which in this case is 4.
+          The elbow method is a technique for finding the optimal number of clusters in a dataset for clustering algorithms like K-means. It involves plotting the within-cluster sum of squares against the number of clusters and identifying the 'elbow point'—in this case, 4.
         </p>
 
         <Screenshot src={elbowMethod} alt="Elbow method showing optimal K=4" />
