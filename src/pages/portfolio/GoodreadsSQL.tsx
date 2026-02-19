@@ -181,7 +181,6 @@ AND id <> (SELECT MIN(id)
         </p>
 
         <Screenshot src={authorUrls} alt="Author URLs in the dataset" />
-        <Screenshot src={authorUrls2} alt="Author URLs continued" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           I created a new column called 'author' and populated it by parsing the 'author_url' column using the last part of its value. Lastly, I replaced the underscore with a space for better readability.
@@ -202,6 +201,8 @@ SET author = REPLACE(
         <p className="text-muted-foreground leading-relaxed mb-4">
           From a rough overview of the initial tables, the genres column includes a lot of valuable data; however, it is loaded with information and is hard to read. First, I removed some unnecessary mentions of '/genres/', punctuation, and added more space between the tags.
         </p>
+
+        <Screenshot src={authorUrls2} alt="Raw genres column data" />
 
         <CodeBlock>{`-- Cleaning up the Genres column
 UPDATE PortfolioProject.dbo.Goodreads
