@@ -233,7 +233,7 @@ pipe.score(x_test, y_test)`}</CodeBlock>
           The performance score came up to 0.703 for this initial test. Taking a closer look at the classification, the model does quite well with identifying Hypodontia, Ulcer and Gingivitis, but it's less effective when it comes to identifying Caries.
         </p>
 
-        <Screenshot src={classificationReport} alt="Classification report showing precision, recall and f1-score" />
+        <SmallScreenshot src={classificationReport} alt="Classification report showing precision, recall and f1-score" />
 
         {/* Fine-tuning */}
         <h2 className="font-display text-2xl font-bold mt-12 mb-4">Fine-tuning the model</h2>
