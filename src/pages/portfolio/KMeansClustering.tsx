@@ -247,6 +247,9 @@ df_scaled = pd.DataFrame(scaler.fit_transform(df_trimmed), columns = df_trimmed.
           Then, I needed to perform Principal Component Analysis (PCA) to reduce the dimensionality of the standardised data. PCA is a technique used for dimensionality reduction by transforming the original variables into a new set of uncorrelated variables called principal components (3 in this case).
         </p>
         <p className="text-muted-foreground leading-relaxed mb-4">
+          I reduced the data to 3 principal components, which captured the majority of variance while enabling 3D visualisation.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
           Reducing dimensionality means reducing the number of variables in a dataset to simplify it and make it more manageable.
         </p>
 
