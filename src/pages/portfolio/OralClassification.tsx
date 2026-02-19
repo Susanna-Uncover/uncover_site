@@ -162,14 +162,7 @@ count = 0
 for disease_name in oral_disease_file_names_dict.keys():
     class_dict[disease_name] = count
     count = count + 1
-class_dict
-
-{'Gingivitis': 0,
- 'Mouth Ulcer': 1,
- 'Tooth Discoloration': 2,
- 'hypodontia': 3,
- 'Data caries': 4,
-  'Calculus': 5}`}</CodeBlock>
+class_dict`}</CodeBlock>
 
         <div className="my-8">
           <img src={waveletResult} alt="Image after wavelet decomposition showing edges and details" className="w-1/4 max-w-[200px] mx-auto rounded-xl border border-border" />
