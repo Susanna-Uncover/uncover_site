@@ -194,7 +194,9 @@ def w2d(img, mode='haar', level=1):
           The code converts the image to grayscale, breaks the image into frequency components, removes the less relevant parts and finally converts the image into an 8-bit format. This is what the images will look like after I have applied this function to them.
         </p>
 
-        <SmallScreenshot src={waveletResult} alt="Image after wavelet decomposition showing edges and details" />
+        <div className="my-8">
+          <img src={waveletResult} alt="Image after wavelet decomposition showing edges and details" className="w-1/4 max-w-[200px] mx-auto rounded-xl border border-border" />
+        </div>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           I needed to prepare the dataset by stacking the original images and the distorted ones produced using the w2d function along with its corresponding disease label. Doing so helps address challenges such as variability in image quality, noise, and subtle differences between classes, leading to a more reliable and accurate model.
