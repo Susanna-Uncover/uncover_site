@@ -47,12 +47,12 @@ const Index = () => {
                 researcher turning complexity into clarity.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="min-w-[160px] justify-center">
                   <Link to="/portfolio">
                     View My Work <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="min-w-[160px] justify-center">
                   <Link to="/contact">Get in Touch</Link>
                 </Button>
               </div>
