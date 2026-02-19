@@ -75,7 +75,7 @@ const KMeansClustering = () => (
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">Pre-requisites</h3>
         <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-6">
           <li>Jupyter Notebook</li>
-          <li>Kaggle dataset</li>
+          <li><a href="https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">Kaggle dataset</a></li>
         </ul>
 
         {/* Objectives */}
