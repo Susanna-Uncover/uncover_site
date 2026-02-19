@@ -1,8 +1,9 @@
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
+import { Database } from "lucide-react";
 
 const projects = [
-  { title: "Cleaning Goodreads Data in SQL", slug: "goodreads-sql" },
+  { title: "Cleaning Goodreads Data for Top Sci-Fi Recommendations", slug: "goodreads-sql", tag: "SQL", icon: Database },
   { title: "Project 2", slug: "portfolio-2" },
   { title: "Project 3", slug: "portfolio-3" },
   { title: "Project 4", slug: "portfolio-4" },
@@ -18,7 +19,7 @@ const Portfolio = () => (
         <h1 className="font-display text-4xl font-bold mb-10">My Projects</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {projects.map((p) => (
-            <ProjectCard key={p.slug} title={p.title} slug={p.slug} basePath="/portfolio" />
+            <ProjectCard key={p.slug} title={p.title} slug={p.slug} basePath="/portfolio" tag={p.tag} icon={p.icon} />
           ))}
         </div>
       </div>

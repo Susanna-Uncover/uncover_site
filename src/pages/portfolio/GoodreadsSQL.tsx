@@ -42,7 +42,7 @@ const GoodreadsSQL = () => (
         {/* Title */}
         <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">Portfolio</p>
         <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
-          Cleaning Goodreads Data in SQL for Sci-Fi Recommendation
+          Cleaning Goodreads Data for Top Sci-Fi Recommendations
         </h1>
 
         {/* Introduction */}
