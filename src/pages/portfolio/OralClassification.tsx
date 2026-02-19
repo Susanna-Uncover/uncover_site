@@ -278,7 +278,7 @@ print('Test set accuracy:', test_score)`}</CodeBlock>
           Neural Network Architectures with multi-label output layers would be particularly beneficial for these sorts of tasks. Neural networks can enable end-to-end learning, allowing the model to automatically extract relevant features from the input data and learn complex relationships between features and labels.
         </p>
 
-        <Screenshot src={multiLabelExample} alt="Example showing multiple oral conditions in one image" />
+        <SmallScreenshot src={multiLabelExample} alt="Example showing multiple oral conditions in one image" />
 
       </div>
     </section>
