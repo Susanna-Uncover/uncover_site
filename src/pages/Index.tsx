@@ -32,7 +32,7 @@ const Index = () => {
       {/* Hero */}
       <section className="section-padding pt-28 min-h-[80vh] flex items-center">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <p className="text-primary font-medium text-sm mb-4 tracking-widest uppercase">
                 Insight Consultant &amp; Data Analyst
@@ -60,7 +60,7 @@ const Index = () => {
             <img
               src={aboutAbstract}
               alt="Abstract data analytics illustration"
-              className="hidden md:block w-[40rem] h-80 rounded-2xl object-cover shrink-0 border border-border"
+              className="hidden md:block w-80 h-80 rounded-2xl object-cover shrink-0 border border-border"
             />
           </div>
         </div>
