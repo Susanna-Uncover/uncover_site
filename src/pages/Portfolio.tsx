@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Car } from "lucide-react";
 
 const projects = [
   { title: "Cleaning Goodreads Data for Top Sci-Fi Recommendations", slug: "goodreads-sql", tag: "SQL", icon: BookOpen },
-  { title: "Project 2", slug: "portfolio-2" },
+  { title: "Exploring and Visualising the Seattle Collision Data", slug: "seattle-collisions", tag: "SQL, Tableau", icon: Car },
   { title: "Project 3", slug: "portfolio-3" },
   { title: "Project 4", slug: "portfolio-4" },
   { title: "Project 5", slug: "portfolio-5" },
