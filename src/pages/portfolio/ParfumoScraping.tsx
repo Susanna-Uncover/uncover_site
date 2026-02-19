@@ -293,7 +293,7 @@ print(top_ingredient_series_cleaned)`}</CodeBlock>
 
         <p className="text-muted-foreground leading-relaxed mb-4">And here is the final result. The same process was repeated for heart and base notes as well to collect these ingredients:</p>
 
-        <Screenshot src={ingredientCounts} alt="Cleaned ingredient counts series" />
+        <SmallScreenshot src={ingredientCounts} alt="Cleaned ingredient counts series" />
 
         {/* Data Analysis */}
         <h2 className="font-display text-2xl font-bold mt-12 mb-4">Data Analysis</h2>
