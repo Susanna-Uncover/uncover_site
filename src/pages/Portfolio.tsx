@@ -7,7 +7,7 @@ const projects = [
   { title: "Exploring and Visualising the Seattle Collision Data", slug: "seattle-collisions", tag: "SQL, Tableau", icon: Car },
   { title: "BeautifulSoup for Web Scraping to Analyse Perfume Trends", slug: "parfumo-scraping", tag: "Python", icon: FlaskConical },
   { title: "Customer Segmentation Using K-means Clustering", slug: "kmeans-clustering", tag: "Python", icon: Users },
-  { title: "Creating an Oral Disease Classification Model", slug: "oral-classification", tag: "Python", icon: ScanEye },
+  { title: "Creating an Oral Disease Classification Model", slug: "oral-classification", tag: "Python, SVC", icon: ScanEye },
   { title: "Project 6", slug: "portfolio-6" },
 ];
 
