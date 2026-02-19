@@ -12,6 +12,7 @@ import topNotesChart from "@/assets/portfolio/parfumo/top-notes-chart.png";
 import heartNotesChart from "@/assets/portfolio/parfumo/heart-notes-chart.jpg";
 import topNotesBar from "@/assets/portfolio/parfumo/top-notes-bar.jpg";
 import baseNotesChart from "@/assets/portfolio/parfumo/base-notes-chart.jpg";
+import scrapingOutput from "@/assets/portfolio/parfumo/scraping-output.png";
 
 const CodeBlock = ({ children }: { children: string }) => (
   <pre className="bg-secondary/60 border border-border rounded-xl p-5 overflow-x-auto text-sm leading-relaxed font-mono text-foreground/90 my-6">
@@ -223,13 +224,7 @@ for link in perfume_links:
     except Exception as e:
         print(f'Error scraping data for {link}: {e}')`}</CodeBlock>
 
-        <CodeBlock>{`Scraping link: https://www.parfumo.com/Perfumes/Panama_1924/panama-1924-eau-de-parfum
-Data scraped successfully for Panama 1924 Panama 1924 Eau de Parfum
-
-Scraping link: https://www.parfumo.com/Perfumes/Pigmentarium/azabache-chapter-2
-Data scraped successfully for Azabache Chapter 2 Pigmentarium 2024
-
-Scraping link: https://www.parfumo.com/Perfumes/louzan/fashion-oud`}</CodeBlock>
+        <Screenshot src={scrapingOutput} alt="Scraping output showing successful data collection" />
 
         <CodeBlock>{`# Saving the data to the CSV file
 
