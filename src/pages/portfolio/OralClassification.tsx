@@ -191,6 +191,8 @@ def w2d(img, mode='haar', level=1):
           The code converts the image to grayscale, breaks the image into frequency components, removes the less relevant parts and finally converts the image into an 8-bit format. This is what the images will look like after I have applied this function to them.
         </p>
 
+        <SmallScreenshot src={stackedImage} alt="Example of stacked original and wavelet-processed image" />
+
         <p className="text-muted-foreground leading-relaxed mb-4">
           I needed to prepare the dataset by stacking the original images and the distorted ones produced using the w2d function along with its corresponding disease label. Doing so helps address challenges such as variability in image quality, noise, and subtle differences between classes, leading to a more reliable and accurate model.
         </p>
@@ -209,8 +211,6 @@ for disease_name, training_files in oral_disease_file_names_dict.items():
         stacked_img = np.vstack((scaled_orig_img.reshape(40*30*3,1), scaled_img_har.reshape(40*30,1)))
         x.append(stacked_img)
         y.append(class_dict[disease_name])`}</CodeBlock>
-
-        <SmallScreenshot src={stackedImage} alt="Example of stacked original and wavelet-processed image" />
 
         {/* Initial SVC modelling */}
         <h2 className="font-display text-2xl font-bold mt-12 mb-4">Initial SVC modelling</h2>
