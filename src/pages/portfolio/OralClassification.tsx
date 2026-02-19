@@ -59,7 +59,7 @@ const OralClassification = () => (
           The pandemic has adversely affected oral health at the practice level, as lockdowns have limited access to dental professionals. Additionally, individual oral care habits have deteriorated due to changes in dietary preferences and reduced engagement in oral hygiene practices.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          With practices being under pressure to serve populations with worsening oral health, some degree of pre-screening could help save valuable time in practice. I have created a classification model that will be able to identify common oral care concerns. The full code is available on GitHub.
+          With practices being under pressure to serve populations with worsening oral health, some degree of pre-screening could help save valuable time in practice. I have created a classification model that will be able to identify common oral care concerns. The full code is available on <a href="https://github.com/Susanna-Uncover/Python-Data-Analytics-Projects/blob/21fa8f4f82319fa09ba3d1ade79c8244107ad01c/2%20Oral%20disease%20classifier.ipynb" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">GitHub</a>.
         </p>
 
         {/* Pre-requisites */}
