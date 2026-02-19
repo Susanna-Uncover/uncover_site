@@ -114,7 +114,7 @@ plt.imshow(img)`}</CodeBlock>
           A Haar cascade is a machine learning-based approach for object detection. It uses a series of simple classifiers (Haar features) applied in stages to identify objects like faces, eyes, or other items in images. Each stage discards regions unlikely to contain the object, so only promising areas undergo further more detailed analysis.
         </p>
 
-        <SmallScreenshot src={waveletResult} alt="Image after wavelet decomposition showing edges and details" />
+        
 
         <CodeBlock>{`smile_cascade = cv2.CascadeClassifier('kaggle/input/haar-cascades-for-face-detection/haarcascade_smile.xml')
 smile = smile_cascade.detectMultiScale(gray, scaleFactor = 1.1, minNeighbors = 5, minSize = (30, 30))
