@@ -301,7 +301,7 @@ ORDER BY rating DESC;`}</CodeBlock>
         </p>
 
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">Key Takeaways</h3>
-        <ol className="list-decimal list-inside text-muted-foreground space-y-3 mb-12">
+        <ul className="list-disc list-inside text-muted-foreground space-y-3 mb-12">
           <li className="leading-relaxed">
             <span className="font-medium text-foreground">Data quality issues compound.</span>{" "}
             Missing ISBNs correlated with missing titles, authors, and other fields; addressing one issue often revealed others.
@@ -314,7 +314,7 @@ ORDER BY rating DESC;`}</CodeBlock>
             <span className="font-medium text-foreground">Filtering criteria matter.</span>{" "}
             Setting a minimum threshold of 30 ratings filtered out obscure entries where averages are unreliable, surfacing books with more representative scores.
           </li>
-        </ol>
+        </ul>
       </div>
     </section>
   </Layout>
