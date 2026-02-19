@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
-  { title: "Project 1", slug: "portfolio-1" },
+  { title: "Cleaning Goodreads Data in SQL", slug: "goodreads-sql" },
   { title: "Project 2", slug: "portfolio-2" },
   { title: "Project 3", slug: "portfolio-3" },
   { title: "Project 4", slug: "portfolio-4" },
