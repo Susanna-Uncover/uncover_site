@@ -102,7 +102,9 @@ const KMeansClustering = () => (
           The CSV file is quite complete as it only has 24 NULL values which makes the data-cleaning process easier. Overall, the data frame consists of 2240 rows and 29 columns, meaning I might need to be selective about the features that will be used for clustering.
         </p>
 
-        <SmallScreenshot src={nullValues} alt="NULL values count per column" />
+        <div className="my-8">
+          <img src={nullValues} alt="NULL values count per column" className="w-1/4 max-w-[200px] mx-auto rounded-xl border border-border" />
+        </div>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           Looking at the data, the age column seems to be missing which can easily be defined based on the year of birth of the customer and the current year (this ensures the data stays accurate):
