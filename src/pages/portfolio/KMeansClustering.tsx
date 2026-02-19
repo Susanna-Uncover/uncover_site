@@ -68,7 +68,7 @@ const KMeansClustering = () => (
           Customer segmentation helps businesses group similar customers based on their characteristics or behaviours. Segmentation is widely used to enable targeted marketing and personalised recommendations.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          I have created a segmentation using K-means to help a department store better target its customers. The full code is available on GitHub.
+          I have created a segmentation using K-means to help a department store better target its customers. The full code is available on <a href="https://github.com/Susanna-Uncover/Python-Data-Analytics-Projects/blob/21fa8f4f82319fa09ba3d1ade79c8244107ad01c/1%20Customer%20segmentation%20using%20k-means.ipynb" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">GitHub</a>.
         </p>
 
         {/* Pre-requisites */}
