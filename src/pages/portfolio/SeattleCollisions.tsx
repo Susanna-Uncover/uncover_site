@@ -303,6 +303,11 @@ FROM PortfolioProject.dbo.SeattleCollision;`}</CodeBlock>
         </p>
 
         <Screenshot src={dashboard1} alt="Tableau dashboard - collision timing analysis" />
+
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Mid-block junctions tend to see the highest number of collisions, closely followed by intersections. Most collisions involve vehicle angles, rear-end impacts, and parked cars.
+        </p>
+
         <Screenshot src={dashboard2} alt="Tableau dashboard - collision types and factors" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
