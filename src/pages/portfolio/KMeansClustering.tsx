@@ -299,13 +299,9 @@ df_trimmed['ClustersK'] = cluster_labels`}</CodeBlock>
           Now, I have checked the results of the clustering. It looks like the clusters are reasonably distinct looking at the 3D visualisation. I have also checked the distribution of the clusters to make sure they are balanced. Cluster 3 has quite a few more entries, but none of the clusters are looking underfilled which is positive.
         </p>
 
-        <div className="my-8 grid grid-cols-2 gap-4 items-center">
-          <div className="rounded-xl border border-border overflow-hidden">
-            <img src={clusters3d} alt="3D visualisation of the 4 clusters" className="w-full h-auto" />
-          </div>
-          <div className="rounded-xl border border-border overflow-hidden">
-            <img src={clusterDistribution} alt="Distribution of the clusters" className="w-full h-auto" />
-          </div>
+        <div className="my-8 flex gap-4 items-center justify-center">
+          <img src={clusters3d} alt="3D visualisation of the 4 clusters" className="rounded-xl border border-border h-48 w-auto" />
+          <img src={clusterDistribution} alt="Distribution of the clusters" className="rounded-xl border border-border h-48 w-auto" />
         </div>
 
         {/* Meet the segments */}
