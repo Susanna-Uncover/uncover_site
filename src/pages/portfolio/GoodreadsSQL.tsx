@@ -240,36 +240,41 @@ SET author = REPLACE(
         {/* 6. Genre filters */}
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">6. Creating Filters for Popular Genres</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          From a rough overview of the initial tables, the genres column includes a lot of valuable data; however, it is loaded with information and is hard to read. First, I removed some unnecessary mentions of '/genres/', punctuation, and added more space between the tags.
+          From a rough overview of the initial tables, the genres column includes a lot of valuable data; however, it is loaded with information and is hard to read:
         </p>
 
         <Screenshot src={authorUrls2} alt="Raw genres column data" />
 
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          First, I have removed some unnecessary mentions of '/genres/', punctuation, and added more space between the tags to make it more readable.
+        </p>
+
         <CodeBlock>{`-- Cleaning up the Genres column
 UPDATE PortfolioProject.dbo.Goodreads
-SET genres = REPLACE(
-  REPLACE(REPLACE(genres, '/genres/', ''), '-', ' '),
-  '|', ' | '
-);`}</CodeBlock>
+SET genres = REPLACE(REPLACE(REPLACE(genres, '/genres/', ''), '-', ' '), '|', ' | ');`}</CodeBlock>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
-          I split the more popular genres into yes/no columns for better usability and filtering. To start with, I checked the most mentioned tags in the genres column:
+          I have split the more popular genres into yes/no columns for better usability and filtering. To start with, I have checked the most mentioned tags in the genres column by applying string split and counting the top 100 most popular entries:
         </p>
 
         <CodeBlock>{`-- Exploring the most popular tags in the genres column
 SELECT TOP 100
-  value [word],
-  COUNT(*) [#times]
-FROM PortfolioProject.dbo.Goodreads
-CROSS APPLY STRING_SPLIT(Goodreads.genres, '|')
+	value [word],
+	COUNT(*) [#times]
+FROM  PortfolioProject.dbo.Goodreads
+CROSS APPLY STRING_SPLIT(Goodreads.genres, '|') 
 GROUP BY value
-ORDER BY COUNT(*) DESC;`}</CodeBlock>
+ORDER BY COUNT(*) DESC`}</CodeBlock>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
-          I identified 9 key genres and created filter columns for them: fantasy, romance, young adult, paranormal, classics, science fiction, mystery, children, and adventure.
+          Looking at the list below, I have identified 9 key genres that I have created filters for. Naturally, this list can be extended, but for simplicity, I have narrowed it down to the most mentioned ones, such as fantasy, romance, young adult, paranormal, classics, science fiction, mystery, children, and adventure.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Firstly, I created the columns as such:
         </p>
 
-        <CodeBlock>{`ALTER TABLE PortfolioProject.dbo.Goodreads
+        <CodeBlock>{`-- Creating filter columns based on the genre hits
+ALTER TABLE PortfolioProject.dbo.Goodreads
 ADD genre_fantasy NVARCHAR(255),
     genre_romance NVARCHAR(255),
     genre_young_adult NVARCHAR(255),
@@ -278,9 +283,13 @@ ADD genre_fantasy NVARCHAR(255),
     genre_science_fiction NVARCHAR(255),
     genre_mystery NVARCHAR(255),
     genre_childrens NVARCHAR(255),
-    genre_adventure NVARCHAR(255);
+    genre_adventure NVARCHAR(255);`}</CodeBlock>
 
-UPDATE PortfolioProject.dbo.Goodreads
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Once the columns are all set, I have populated them with 'Yes/No' values based on the information provided in the 'genres' column:
+        </p>
+
+        <CodeBlock>{`UPDATE PortfolioProject.dbo.Goodreads
 SET genre_fantasy = CASE WHEN genres LIKE '%fantasy%' THEN 'Yes' ELSE 'No' END,
     genre_romance = CASE WHEN genres LIKE '%romance%' THEN 'Yes' ELSE 'No' END,
     genre_young_adult = CASE WHEN genres LIKE '%young adult%' THEN 'Yes' ELSE 'No' END,
@@ -292,12 +301,12 @@ SET genre_fantasy = CASE WHEN genres LIKE '%fantasy%' THEN 'Yes' ELSE 'No' END,
     genre_adventure = CASE WHEN genres LIKE '%adventure%' THEN 'Yes' ELSE 'No' END;`}</CodeBlock>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Lastly, I dropped the unused columns, such as 'media_type', which are not informative since they contain the same value across all rows.
+          Lastly, I have dropped the unused columns, such as 'media_type', which are not informative since they contain the same value across all rows.
         </p>
 
         <CodeBlock>{`-- Delete unused columns
 ALTER TABLE PortfolioProject.dbo.Goodreads
-DROP COLUMN media_type, author_url, directory;`}</CodeBlock>
+DROP COLUMN media_type, author_url, directory`}</CodeBlock>
 
         {/* Using the data */}
         <h2 className="font-display text-2xl font-bold mt-12 mb-4">Using the Data</h2>
