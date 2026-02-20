@@ -70,7 +70,7 @@ const GoodreadsSQL = () => (
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">Pre-requisites</h3>
         <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-6">
           <li>SQL Server</li>
-          <li>Goodreads Kaggle dataset</li>
+          <li>Goodreads <a href="https://www.kaggle.com/datasets/chiragmohnani/book-sample-dataset-cleaning-goodreads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Kaggle dataset</a></li>
         </ul>
 
         {/* Why SQL */}
