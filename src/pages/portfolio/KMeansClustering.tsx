@@ -394,13 +394,13 @@ plt.show()`}</CodeBlock>
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">Key Takeaways</h3>
         <ul className="list-disc list-inside text-muted-foreground space-y-3 mb-12">
           <li className="leading-relaxed">
-            <strong>Feature engineering improves segmentation.</strong> Creating derived columns like TotalSpend, Parent, and N_minors_home consolidated related information and produced more meaningful clusters.
+            <strong className="text-foreground">Feature engineering improves segmentation.</strong> Creating derived columns like TotalSpend, Parent, and N_minors_home consolidated related information and produced more meaningful clusters.
           </li>
           <li className="leading-relaxed">
-            <strong>Dimensionality reduction enables visualization.</strong> Reducing 15 features to 3 principal components made it possible to visually verify cluster separation while retaining the majority of variance.
+            <strong className="text-foreground">Dimensionality reduction enables visualisation.</strong> Reducing 15 features to 3 principal components made it possible to visually verify cluster separation while retaining the majority of variance.
           </li>
           <li className="leading-relaxed">
-            <strong>Segments reveal actionable differences.</strong> The four clusters showed distinct patterns in income, spending, and channel preference—providing clear direction for targeted marketing strategies.
+            <strong className="text-foreground">Segments reveal actionable differences.</strong> The four clusters showed distinct patterns in income, spending, and channel preference, providing clear direction for targeted marketing strategies.
           </li>
         </ul>
 
