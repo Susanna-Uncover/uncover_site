@@ -204,11 +204,12 @@ df['TotalSpend'] = df['Wines'] + df['Fruits'] + df['Meat'] + df['Fish'] + df['Sw
           The majority of these customers are parents, with at least one child, although quite a few of them are DINKs with no kids in the house. Most of them are married or dating and have a bachelor's degree or higher.
         </p>
 
+        <Screenshot src={demographics3} alt="Customer spending by product category" />
+
         <p className="text-muted-foreground leading-relaxed mb-4">
           Most customers have spent a minimal amount of money with the department store over the last 2 years (under 500 USD). The spending looks consistent across all product categories, with most customers spending minimally across all categories.
         </p>
 
-        <Screenshot src={demographics3} alt="Customer spending by product category" />
         <Screenshot src={totalSpend} alt="Number of customers by total spend" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
