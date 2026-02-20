@@ -67,8 +67,6 @@ const OralClassification = () => (
         <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-6">
           <li>Jupyter Notebook</li>
           <li>Oral diseases <a href="https://www.kaggle.com/datasets/salmansajid05/oral-diseases" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">Kaggle dataset</a></li>
-          <li>This dataset contains folders dedicated to common oral diseases containing images of what these may look like</li>
-          <li>Distorted and augmented versions of these images are also enclosed to improve the training and accuracy of the models</li>
         </ul>
 
         {/* What is Classification */}
