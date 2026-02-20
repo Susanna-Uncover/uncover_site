@@ -183,19 +183,22 @@ df['TotalSpend'] = df['Wines'] + df['Fruits'] + df['Meat'] + df['Fish'] + df['Sw
           Firstly, the majority of the customers are over the age of 40 and many of them earn more than the average US citizen (37,585 USD (2022)) meaning they are better off than the average.
         </p>
 
-        <div className="my-8">
+        <div className="my-8 grid grid-cols-2 gap-4">
           <img
             src={demographics1}
             alt="Customer demographics by age and income"
-            className="w-1/2 max-w-md mx-auto rounded-xl border border-border"
+            className="rounded-xl border border-border w-full"
+          />
+          <img
+            src={demographics2}
+            alt="Customer demographics by education, marital status and parenthood"
+            className="rounded-xl border border-border w-full"
           />
         </div>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           The majority of these customers are parents, with at least one child, although quite a few of them are DINKs with no kids in the house. Most of them are married or dating and have a bachelor's degree or higher.
         </p>
-
-        <Screenshot src={demographics2} alt="Customer demographics by education, marital status and parenthood" />
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           Most customers have spent a minimal amount of money with the department store over the last 2 years (under 500 USD). The spending looks consistent across all product categories, with most customers spending minimally across all categories.
