@@ -80,7 +80,7 @@ const SeattleCollisions = () => (
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">Pre-requisites</h3>
         <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-6">
           <li>SQL Server</li>
-          <li><a href="https://www.kaggle.com/datasets/mcfly1/vehicle-collision-data-in-seattle-2005-2019" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Seattle collisions Kaggle dataset</a></li>
+          <li>Seattle collisions <a href="https://www.kaggle.com/datasets/mcfly1/vehicle-collision-data-in-seattle-2005-2019" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Kaggle dataset</a></li>
           <li>Tableau Public</li>
         </ul>
 
