@@ -71,7 +71,7 @@ const SeattleCollisions = () => (
           <a href="https://github.com/Susanna-Uncover/SQL-projects/blob/13da97402cc9d9bd929e2be94bce6f2329024a80/2%20SQL%20Seattle%20Collision%20Exploration%20Project.sql" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             GitHub
           </a>. You can also view the full Tableau dashboard{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          <a href="https://public.tableau.com/app/profile/susanna.tatevosyan/viz/SeattleCollisionsCircumstancesandCauses/SeattleCollisionsCircumstancesandCauses" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             here
           </a>.
         </p>
