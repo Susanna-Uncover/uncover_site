@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -43,6 +44,127 @@ const SmallScreenshot = ({ src, alt }: { src: string; alt: string }) => (
     />
   </div>
 );
+
+const segments = [
+  {
+    title: "Segment 1: Mid-income deal hunters",
+    subtitle: "A sizeable and important segment:",
+    points: [
+      "Most are parents with at least 1 - 2 children",
+      "Tend to have mid income 45 - 60K USD",
+      "Mid-level spending, 250-650 USD",
+      "More interested in deals than other segments with 3 - 5 deals purchased",
+      "Lower interest in catalogue shopping (1 - 2 purchases), average interest in online (4 - 5), average store purchases (5 - 10)",
+      "Interested in wines, meat and gold, lower interest in sweets, fruits, fish",
+    ],
+    image: segment1,
+    alt: "Segment 1: Mid-income deal hunters",
+  },
+  {
+    title: "Segment 2: High-income in-store lovers",
+    subtitle: "Smallest, but high value group:",
+    points: [
+      "Most are parents with 1 child",
+      "High income 70 - 80K USD",
+      "High spenders, 800-1,200 USD",
+      "Moderate interest in deals with 2 - 3 deals purchased",
+      "High interest in online shopping (5 - 7)",
+      "Highest interest in in-store shopping (8-10)",
+      "Mid interest in catalogue",
+      "Very interested in wines, meat and gold",
+    ],
+    image: segment2,
+    alt: "Segment 2: High-income in-store lovers",
+  },
+  {
+    title: "Segment 3: Lower-income visitors",
+    subtitle: "Our largest segment:",
+    points: [
+      "Most are parents with 1 child, some childless",
+      "Lower income 30 - 40K USD",
+      "Low spenders, 0 - 200 USD",
+      "Moderate interest in deals with 2 - 3 deals purchased",
+      "Lower engagement with catalogue and online, they average about 2-3 store visits",
+      "Low spending across all categories with some interest in meat",
+    ],
+    image: segment3,
+    alt: "Segment 3: Lower-income visitors",
+  },
+  {
+    title: "Segment 4: Affluent single regulars",
+    subtitle: "Second largest and high value segment:",
+    points: [
+      "Most are single and don't have children",
+      "High income 70 - 80K USD",
+      "High spenders, 800-1,200 USD",
+      "Moderate interest in deals with 2 - 3 deals purchased",
+      "Highest engagement with catalogue (5) average for online and in-store (5-10)",
+      "High spending across all categories, especially wines, sweets, fruits and meat",
+    ],
+    image: segment4,
+    alt: "Segment 4: Affluent single regulars",
+  },
+];
+
+const SegmentSlideshow = () => {
+  const [active, setActive] = useState(0);
+  const seg = segments[active];
+
+  return (
+    <div className="my-8">
+      {/* Navigation dots */}
+      <div className="flex items-center justify-center gap-2 mb-6">
+        {segments.map((s, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              i === active
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {i + 1}
+          </button>
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="bg-secondary/30 border border-border rounded-2xl p-6 md:p-8">
+        <h3 className="font-display text-lg font-semibold mb-2">{seg.title}</h3>
+        <p className="text-muted-foreground leading-relaxed mb-4">{seg.subtitle}</p>
+        <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-6">
+          {seg.points.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
+        <img
+          src={seg.image}
+          alt={seg.alt}
+          className="w-full max-w-3xl mx-auto rounded-xl border border-border"
+        />
+      </div>
+
+      {/* Prev/Next */}
+      <div className="flex justify-between mt-4">
+        <button
+          onClick={() => setActive((p) => Math.max(0, p - 1))}
+          disabled={active === 0}
+          className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
+        >
+          ← Previous
+        </button>
+        <button
+          onClick={() => setActive((p) => Math.min(segments.length - 1, p + 1))}
+          disabled={active === segments.length - 1}
+          className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
+        >
+          Next →
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const KMeansClustering = () => (
   <Layout>
@@ -340,55 +462,7 @@ plt.show()`}</CodeBlock>
           And when summed up, the segment cards look like this! Thanks to K-means clustering I have landed on 4 distinct segments with their own shopping preferences and behaviours.
         </p>
 
-        <h3 className="font-display text-lg font-semibold mt-8 mb-3">Segment 1: Mid-income deal hunters</h3>
-        <p className="text-muted-foreground leading-relaxed mb-4">A sizeable and important segment:</p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
-          <li>Most are parents with at least 1 - 2 children</li>
-          <li>Tend to have mid income 45 - 60K USD</li>
-          <li>Mid-level spending, 250-650 USD</li>
-          <li>More interested in deals than other segments with 3 - 5 deals purchased</li>
-          <li>Lower interest in catalogue shopping (1 - 2 purchases), average interest in online (4 - 5), average store purchases (5 - 10)</li>
-          <li>Interested in wines, meat and gold, lower interest in sweets, fruits, fish</li>
-        </ul>
-        <Screenshot src={segment1} alt="Segment 1: Mid-income deal hunters" />
-
-        <h3 className="font-display text-lg font-semibold mt-8 mb-3">Segment 2: High-income in-store lovers</h3>
-        <p className="text-muted-foreground leading-relaxed mb-4">Smallest, but high value group:</p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
-          <li>Most are parents with 1 child</li>
-          <li>High income 70 - 80K USD</li>
-          <li>High spenders, 800-1,200 USD</li>
-          <li>Moderate interest in deals with 2 - 3 deals purchased</li>
-          <li>High interest in online shopping (5 - 7)</li>
-          <li>Highest interest in in-store shopping (8-10)</li>
-          <li>Mid interest in catalogue</li>
-          <li>Very interested in wines, meat and gold</li>
-        </ul>
-        <Screenshot src={segment2} alt="Segment 2: High-income in-store lovers" />
-
-        <h3 className="font-display text-lg font-semibold mt-8 mb-3">Segment 3: Lower-income visitors</h3>
-        <p className="text-muted-foreground leading-relaxed mb-4">Our largest segment:</p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
-          <li>Most are parents with 1 child, some childless</li>
-          <li>Lower income 30 - 40K USD</li>
-          <li>Low spenders, 0 - 200 USD</li>
-          <li>Moderate interest in deals with 2 - 3 deals purchased</li>
-          <li>Lower engagement with catalogue and online, they average about 2-3 store visits</li>
-          <li>Low spending across all categories with some interest in meat</li>
-        </ul>
-        <Screenshot src={segment3} alt="Segment 3: Lower-income visitors" />
-
-        <h3 className="font-display text-lg font-semibold mt-8 mb-3">Segment 4: Affluent single regulars</h3>
-        <p className="text-muted-foreground leading-relaxed mb-4">Second largest and high value segment:</p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
-          <li>Most are single and don't have children</li>
-          <li>High income 70 - 80K USD</li>
-          <li>High spenders, 800-1,200 USD</li>
-          <li>Moderate interest in deals with 2 - 3 deals purchased</li>
-          <li>Highest engagement with catalogue (5) average for online and in-store (5-10)</li>
-          <li>High spending across all categories, especially wines, sweets, fruits and meat</li>
-        </ul>
-        <Screenshot src={segment4} alt="Segment 4: Affluent single regulars" />
+        <SegmentSlideshow />
 
         {/* Key Takeaways */}
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">Key Takeaways</h3>
