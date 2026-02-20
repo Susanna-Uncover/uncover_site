@@ -335,8 +335,8 @@ ORDER BY rating DESC;`}</CodeBlock>
 
         <Screenshot src={sciFiltered} alt="Filtered sci-fi results" />
 
-        {/* Author Insights */}
-        <h2 className="font-display text-2xl font-bold mt-12 mb-4">Author Insights</h2>
+        {/* The result */}
+        <h2 className="font-display text-2xl font-bold mt-12 mb-4">The Result</h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
           Among the more well-known authors, Brandon Sanderson came up on top as the most well-rated author with his book 'Words of Radiance'. Coincidentally, I haven't had a chance to read much of his work before.
         </p>
