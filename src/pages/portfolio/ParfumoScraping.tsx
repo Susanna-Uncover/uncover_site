@@ -67,7 +67,7 @@ const ParfumoScraping = () => (
           Some reviewers have noticed an increase in vanilla perfume releases lately. In this project, I have used web scraping techniques with Beautiful Soup to measure just how significant this increase is.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-6">
-          The full code is available on GitHub.
+          The full code is available on <a href="https://github.com/Susanna-Uncover/Python-Data-Analytics-Projects/blob/21fa8f4f82319fa09ba3d1ade79c8244107ad01c/3%20Python%20Parfumo%20-%20Web%20Scraping.ipynb" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">GitHub</a>.
         </p>
 
         {/* Pre-requisites */}
