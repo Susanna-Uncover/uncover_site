@@ -183,7 +183,7 @@ const About = () => (
           <div className="relative border-l-2 border-border ml-4 pl-8 space-y-8">
             {education.map((edu, i) => (
               <div key={i} className="relative">
-                <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+                <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary" />
                 <span className="text-xs text-primary font-medium tracking-wider uppercase">{edu.period}</span>
                 <h3 className="font-display text-lg font-semibold mt-1">{edu.title}</h3>
                 <p className="text-muted-foreground text-sm">{edu.institution}</p>
