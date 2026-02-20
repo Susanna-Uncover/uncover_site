@@ -183,7 +183,13 @@ df['TotalSpend'] = df['Wines'] + df['Fruits'] + df['Meat'] + df['Fish'] + df['Sw
           Firstly, the majority of the customers are over the age of 40 and many of them earn more than the average US citizen (37,585 USD (2022)) meaning they are better off than the average.
         </p>
 
-        <Screenshot src={demographics1} alt="Customer demographics by age and income" />
+        <div className="my-8">
+          <img
+            src={demographics1}
+            alt="Customer demographics by age and income"
+            className="w-1/2 max-w-md mx-auto rounded-xl border border-border"
+          />
+        </div>
 
         <p className="text-muted-foreground leading-relaxed mb-4">
           The majority of these customers are parents, with at least one child, although quite a few of them are DINKs with no kids in the house. Most of them are married or dating and have a bachelor's degree or higher.
