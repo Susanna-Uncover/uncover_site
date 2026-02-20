@@ -133,11 +133,6 @@ const SegmentSlideshow = () => {
       <div className="bg-secondary/30 border border-border rounded-2xl p-6 md:p-8">
         <h3 className="font-display text-lg font-semibold mb-2">{seg.title}</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">{seg.subtitle}</p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-6">
-          {seg.points.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
-        </ul>
         <img
           src={seg.image}
           alt={seg.alt}
