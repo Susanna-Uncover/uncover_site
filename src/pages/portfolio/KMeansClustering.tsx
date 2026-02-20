@@ -300,8 +300,8 @@ df_trimmed['ClustersK'] = cluster_labels`}</CodeBlock>
         </p>
 
         <div className="my-8 flex gap-4 items-center justify-center">
-          <img src={clusters3d} alt="3D visualisation of the 4 clusters" className="rounded-xl border border-border h-48 w-auto" />
-          <img src={clusterDistribution} alt="Distribution of the clusters" className="rounded-xl border border-border h-48 w-auto" />
+          <img src={clusters3d} alt="3D visualisation of the 4 clusters" className="rounded-xl border border-border h-72 w-auto" />
+          <img src={clusterDistribution} alt="Distribution of the clusters" className="rounded-xl border border-border h-72 w-auto" />
         </div>
 
         {/* Meet the segments */}
