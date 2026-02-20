@@ -320,12 +320,7 @@ DROP COLUMN media_type, author_url, directory`}</CodeBlock>
           Interestingly, the highest-rated books on this list seem to have a relatively small number of ratings and reviews. Missing ISBN also seems to be a marker of more obscure entries with more missing data.
         </p>
 
-        <p className="text-muted-foreground leading-relaxed mb-4">
-          To get a more accurate read on the books readers particularly liked, I filtered out the rows with missing ISBNs and titles with a rating_count below 30, where the ratings become more representative. Lastly, I narrowed down on the science fiction genre using the filter column:
-        </p>
-
-        <CodeBlock>{`-- Ordering the columns, filtering out low rating counts,
--- missing isbn rows, and non-sci-fi books
+        <CodeBlock>{`-- Ordering the columns, filtering out low rating counts, missing isbn rows, and non-sci-fi books
 SELECT id, isbn, rating_100, rating_count, numberofreviews,
        title, author, publishing_year, genre_science_fiction
 FROM PortfolioProject.dbo.Goodreads
@@ -333,6 +328,10 @@ WHERE genre_science_fiction = 'Yes'
   AND rating_count > 30
   AND isbn IS NOT NULL
 ORDER BY rating DESC;`}</CodeBlock>
+
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          To get a more accurate read on the books readers particularly liked, I filtered out the rows with missing ISBNs and titles with a rating_count below 30, where the ratings become more representative. Lastly, I narrowed down on the science fiction genre using the filter column:
+        </p>
 
         <Screenshot src={sciFiltered} alt="Filtered sci-fi results" />
 
