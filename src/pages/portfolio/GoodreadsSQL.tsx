@@ -111,7 +111,37 @@ ADD id INT IDENTITY(1,1);`}</CodeBlock>
           Since the data in the first row is initially read as column names, it needs to be saved as a new row before the column is renamed.
         </p>
 
-        {/* 2. Handling missing values */}
+        <CodeBlock>{`-- Duplicating the first row of data before renaming the columns
+INSERT INTO PortfolioProject.dbo.Goodreads
+VALUES (
+	4.4
+	, 136455
+	, '0439023483'
+	, 'good_reads:book'
+	, 'https://www.goodreads.com/author/show/153394.Suzanne_Collins'
+	, 2008
+	, '/genres/young-adult|/genres/science-fiction|/genres/dystopia|/genres/fantasy|/genres/science-fiction|/genres/romance|/genres/adventure|/genres/book-club|/genres/young-adult|/genres/teen|/genres/apocalyptic|/genres/post-apocalyptic|/genres/action'
+	, 'dir01/2767052-the-hunger-games.html'
+	, 2958974
+	, 'The Hunger Games (The Hunger Games, #1)'
+	)`}</CodeBlock>
+
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Next, I renamed the columns as such:
+        </p>
+
+        <CodeBlock>{`-- Renaming the columns 
+EXEC sp_rename 'Goodreads.4#4', 'rating';
+EXEC sp_rename 'Goodreads.136455', 'numberofreviews';
+EXEC sp_rename 'Goodreads.0439023483', 'isbn';
+EXEC sp_rename 'Goodreads.good_reads:book', 'media_type';
+EXEC sp_rename 'Goodreads.https://www#goodreads#com/author/show/153394#Suzanne_Collins', 'author_url';
+EXEC sp_rename 'Goodreads.2008', 'publishing_year';
+EXEC sp_rename 'Goodreads./genres/young-adult|/genres/science-fiction|/genres/dystopia|/ge', 'genres';
+EXEC sp_rename 'Goodreads.dir01/2767052-the-hunger-games#html', 'directory';
+EXEC sp_rename 'Goodreads.2958974', 'rating_count';
+EXEC sp_rename 'Goodreads.The Hunger Games (The Hunger Games, #1)', 'title';`}</CodeBlock>
+
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">2. Handling Missing Values</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
           The initial overview shows that the number of NULL values is underreported since some missing values are marked as 'None' in the dataset. Moreover, the dataset also includes two entries that are missing most of the important information.
