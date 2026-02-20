@@ -61,7 +61,7 @@ const GoodreadsSQL = () => (
         </p>
         <p className="text-muted-foreground leading-relaxed mb-6">
           The full code is available on{" "}
-          <a href="https://github.com/Susanna-Uncover" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          <a href="https://github.com/Susanna-Uncover/SQL-projects/blob/13da97402cc9d9bd929e2be94bce6f2329024a80/1%20SQL%20Goodreads%20Data%20Cleaning%20Project.sql" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
             GitHub
           </a>.
         </p>
