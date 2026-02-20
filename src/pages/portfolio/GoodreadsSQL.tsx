@@ -188,7 +188,10 @@ SET rating_100 = rating * 20;`}</CodeBlock>
         {/* 4. Removing duplicates */}
         <h3 className="font-display text-lg font-semibold mt-8 mb-3">4. Removing Duplicates</h3>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          First, I looked at counts of duplicate values based on the ISBNs of the books. ISBN is a unique identifier assigned to books and related products to facilitate their identification, so it can prove useful for identifying duplicates.
+          First, I looked at counts of duplicate values based on the ISBNs of the books. ISBN is a unique identifier assigned to books and related products (such as e-books) to facilitate their identification, so it can prove to be useful for identifying duplicates.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          With the help of this code, I have identified 3 duplicate entries with identical information:
         </p>
 
         <CodeBlock>{`-- Identifying duplicate values
@@ -197,7 +200,15 @@ FROM PortfolioProject.dbo.Goodreads
 GROUP BY isbn
 HAVING COUNT(*) > 1;
 
--- Removing duplicate rows
+SELECT *
+FROM PortfolioProject.dbo.Goodreads
+WHERE isbn = '0439023483';`}</CodeBlock>
+
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Using the 'id' column that I have created earlier, I have removed the duplicate rows as such:
+        </p>
+
+        <CodeBlock>{`-- Removing duplicate rows
 DELETE FROM PortfolioProject.dbo.Goodreads
 WHERE isbn = '0439023483'
 AND id <> (SELECT MIN(id)
