@@ -343,6 +343,10 @@ ORDER BY rating DESC;`}</CodeBlock>
 
         <Screenshot src={brandonSanderson} alt="Top rated Brandon Sanderson books" />
 
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          With both of Sanderson's Stormlight Archive entries being highly rated by a high number of readers, I'm adding both of them to my Audible wish list and am looking forward to reading them this year.
+        </p>
+
         {/* Conclusion */}
         <h2 className="font-display text-2xl font-bold mt-12 mb-4">Conclusion</h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
