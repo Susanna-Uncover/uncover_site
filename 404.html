@@ -1,0 +1,11 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Redirect to index.html, preserving the path
+      const path = window.location.pathname;
+      window.location.replace('/' + '?redirect=' + encodeURIComponent(path));
+    </script>
+  </head>
+</html>
