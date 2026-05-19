@@ -3,7 +3,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Link } from "react-router-dom";
 import { BarChart3, Search, PieChart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import aboutAbstract from "@/assets/about-abstract.jpg";
+import heroVideo from "@/assets/hero.mp4";
 
 const services = [
   {
