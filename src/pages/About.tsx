@@ -194,7 +194,7 @@ const About = () => (
 
         {/* Certifications */}
         <div>
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center gap-3 mb-8 -ml-1">
             <Award size={24} className="text-primary" />
             <h2 className="font-display text-3xl font-bold">Certifications</h2>
           </div>
