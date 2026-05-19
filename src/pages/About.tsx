@@ -195,13 +195,15 @@ const About = () => (
         {/* Certifications */}
         <div>
           <div className="flex items-center gap-3 mb-8 -ml-1">
-            <Award size={24} className="text-primary" />
-            <h2 className="font-display text-3xl font-bold">Certifications</h2>
+            <span className="w-6 flex justify-center shrink-0">
+              <Award size={24} className="text-primary" />
+            </span>
+            <h2 className="font-display text-3xl font-bold -ml-1">Certifications</h2>
           </div>
           <ul className="space-y-3">
             {certifications.map((cert, i) => (
               <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm">
-                <span className="text-primary mt-0.5 shrink-0">✓</span>
+                <span className="text-primary mt-0.5 shrink-0 w-6 text-center">✓</span>
                 {cert}
               </li>
             ))}
