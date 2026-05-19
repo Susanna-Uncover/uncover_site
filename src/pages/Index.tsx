@@ -64,8 +64,15 @@ const Index = () => {
               muted
               playsInline
               preload="auto"
-              className="hidden md:block w-80 h-80 rounded-2xl object-cover shrink-0 border border-border"
+              className="hidden md:block w-80 h-80 object-cover shrink-0"
+              style={{
+                WebkitMaskImage:
+                  "radial-gradient(ellipse at center, black 35%, transparent 75%)",
+                maskImage:
+                  "radial-gradient(ellipse at center, black 35%, transparent 75%)",
+              }}
             />
+
 
           </div>
         </div>
