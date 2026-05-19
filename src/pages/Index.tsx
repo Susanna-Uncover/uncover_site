@@ -57,11 +57,16 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <img
-              src={aboutAbstract}
-              alt="Abstract data analytics illustration"
+            <video
+              src={heroVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
               className="hidden md:block w-80 h-80 rounded-2xl object-cover shrink-0 border border-border"
             />
+
           </div>
         </div>
       </section>
