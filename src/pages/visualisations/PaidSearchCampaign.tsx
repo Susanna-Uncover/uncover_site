@@ -36,8 +36,7 @@ const PaidSearchCampaign = () => {
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">Tableau</p>
           <h1 className="font-display text-4xl font-bold mb-6">Paid Search Campaign Evaluation</h1>
           <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-            An interactive Tableau dashboard evaluating the performance of a paid search campaign across
-            key metrics including impressions, clicks, conversions, and return on ad spend.
+            Store X required a focused evaluation of paid search performance and profitability across Jul 2025 to Nov 2025. This dashboard distils the campaign's commercial efficiency, conversion mix, and financial return, highlighting where scale was achieved, where spend outpaced value, and which segments contributed most meaningfully to performance.
           </p>
           <div
             ref={wrapperRef}
@@ -58,6 +57,16 @@ const PaidSearchCampaign = () => {
               }}
               allowFullScreen
             />
+          </div>
+
+          <div className="mt-10 max-w-3xl">
+            <h2 className="font-display text-2xl font-bold mb-4">Key findings</h2>
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+              <li>The campaign was overall unprofitable, generating $562K in revenue against $635K in cost, for -$73K profit and a -13.1% net profit margin.</li>
+              <li>ROAS closed at 0.88, indicating the campaign did not fully recover its spend.</li>
+              <li>Black Friday was the standout promo type, delivering the strongest efficiency at 4.36 ROAS and a 77.0% net profit margin.</li>
+              <li>Coupon delivered the largest conversion volume but also the greatest loss, with 47,170 conversions alongside -$40.72K profit and a -14.9% margin.</li>
+            </ul>
           </div>
         </div>
       </section>
