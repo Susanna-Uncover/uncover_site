@@ -31,10 +31,10 @@ const PaidSearchCampaign = () => {
 
     const divElement = container.querySelector<HTMLDivElement>("#viz1779457378617");
     const vizElement = divElement?.getElementsByTagName("object")[0];
-    if (vizElement) {
-      const width = divElement!.offsetWidth;
-      vizElement.style.width = "100%";
-      vizElement.style.height = Math.round(width * 0.65) + "px";
+    if (vizElement && divElement) {
+      const width = divElement.offsetWidth;
+      vizElement.style.width = width + "px";
+      vizElement.style.height = Math.round(width * (795 / 1366)) + "px";
     }
 
     const scriptElement = document.createElement("script");
