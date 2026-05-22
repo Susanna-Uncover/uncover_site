@@ -14,6 +14,7 @@ import SeattleCollisions from "./pages/portfolio/SeattleCollisions";
 import ParfumoScraping from "./pages/portfolio/ParfumoScraping";
 import KMeansClustering from "./pages/portfolio/KMeansClustering";
 import OralClassification from "./pages/portfolio/OralClassification";
+import PaidSearchCampaign from "./pages/visualisations/PaidSearchCampaign";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/portfolio/parfumo-scraping" element={<ParfumoScraping />} />
           <Route path="/portfolio/kmeans-clustering" element={<KMeansClustering />} />
           <Route path="/portfolio/oral-classification" element={<OralClassification />} />
+          <Route path="/visualisations/paid-search-campaign" element={<PaidSearchCampaign />} />
           <Route path="/portfolio/:slug" element={<ProjectDetail />} />
           <Route path="/visualisations/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />

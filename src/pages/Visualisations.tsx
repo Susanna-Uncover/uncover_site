@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
 
 const visualisations = [
-  { title: "Visualisation 1", slug: "visualisation-1" },
+  { title: "Paid Search Campaign Evaluation", slug: "paid-search-campaign" },
   { title: "Visualisation 2", slug: "visualisation-2" },
   { title: "Visualisation 3", slug: "visualisation-3" },
 ];
