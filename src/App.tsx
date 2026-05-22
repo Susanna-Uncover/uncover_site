@@ -35,6 +35,7 @@ const App = () => (
           <Route path="/portfolio/parfumo-scraping" element={<ParfumoScraping />} />
           <Route path="/portfolio/kmeans-clustering" element={<KMeansClustering />} />
           <Route path="/portfolio/oral-classification" element={<OralClassification />} />
+          <Route path="/visualisations/paid-search-campaign" element={<PaidSearchCampaign />} />
           <Route path="/portfolio/:slug" element={<ProjectDetail />} />
           <Route path="/visualisations/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
