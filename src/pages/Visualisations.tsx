@@ -1,8 +1,9 @@
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
+import { BarChart3 } from "lucide-react";
 
 const visualisations = [
-  { title: "Paid Search Campaign Evaluation", slug: "paid-search-campaign" },
+  { title: "Paid Search Campaign Evaluation", slug: "paid-search-campaign", tag: "Tableau", icon: BarChart3 },
   { title: "Visualisation 2", slug: "visualisation-2" },
   { title: "Visualisation 3", slug: "visualisation-3" },
 ];
@@ -15,7 +16,7 @@ const Visualisations = () => (
         <h1 className="font-display text-4xl font-bold mb-10">Data Visualisations</h1>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {visualisations.map((v) => (
-            <ProjectCard key={v.slug} title={v.title} slug={v.slug} basePath="/visualisations" />
+            <ProjectCard key={v.slug} title={v.title} slug={v.slug} basePath="/visualisations" tag={v.tag} icon={v.icon} />
           ))}
         </div>
       </div>
