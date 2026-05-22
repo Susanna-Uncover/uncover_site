@@ -1,49 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const VIZ_WIDTH = 1366;
+const VIZ_HEIGHT = 795;
+const VIZ_URL =
+  "https://public.tableau.com/views/Paidsearchcampaignevaluation-Jul2025-Nov2025/PaidSearchCampaignEvaluation?:language=en-GB&:embed=true&:showVizHome=no&:toolbar=yes&:display_count=n&:origin=viz_share_link";
+
 const PaidSearchCampaign = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    container.innerHTML = `
-      <div class='tableauPlaceholder' id='viz1779457378617' style='position: relative; width: 100%;'>
-        <object class='tableauViz' style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' />
-          <param name='path' value='shared&#47;H4G5B88DX' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image' value='https://public.tableau.com/static/images/H4/H4G5B88DX/1.png' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en-GB' />
-        </object>
-      </div>
-    `;
-
-    const divElement = container.querySelector<HTMLDivElement>("#viz1779457378617");
-    const vizElement = divElement?.getElementsByTagName("object")[0];
-    if (vizElement && divElement) {
-      const width = divElement.offsetWidth;
-      vizElement.style.width = width + "px";
-      vizElement.style.height = Math.round(width * (795 / 1366)) + "px";
-    }
-
-    const scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-    vizElement?.parentNode?.insertBefore(scriptElement, vizElement);
-
-    return () => {
-      if (container) container.innerHTML = "";
+    const update = () => {
+      const w = wrapperRef.current?.offsetWidth ?? VIZ_WIDTH;
+      setScale(Math.min(1, w / VIZ_WIDTH));
     };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   return (
@@ -62,7 +39,26 @@ const PaidSearchCampaign = () => {
             An interactive Tableau dashboard evaluating the performance of a paid search campaign across
             key metrics including impressions, clicks, conversions, and return on ad spend.
           </p>
-          <div ref={containerRef} className="w-full rounded-2xl overflow-hidden border border-border bg-secondary/30" />
+          <div
+            ref={wrapperRef}
+            className="w-full rounded-2xl overflow-hidden border border-border bg-secondary/30"
+            style={{ height: VIZ_HEIGHT * scale }}
+          >
+            <iframe
+              src={VIZ_URL}
+              title="Paid Search Campaign Evaluation"
+              width={VIZ_WIDTH}
+              height={VIZ_HEIGHT}
+              style={{
+                border: 0,
+                width: VIZ_WIDTH,
+                height: VIZ_HEIGHT,
+                transform: `scale(${scale})`,
+                transformOrigin: "top left",
+              }}
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
     </Layout>
