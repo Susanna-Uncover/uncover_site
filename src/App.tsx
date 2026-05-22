@@ -14,6 +14,7 @@ import SeattleCollisions from "./pages/portfolio/SeattleCollisions";
 import ParfumoScraping from "./pages/portfolio/ParfumoScraping";
 import KMeansClustering from "./pages/portfolio/KMeansClustering";
 import OralClassification from "./pages/portfolio/OralClassification";
+import PaidSearchCampaign from "./pages/visualisations/PaidSearchCampaign";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
