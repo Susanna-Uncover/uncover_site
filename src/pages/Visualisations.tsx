@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
-import { BarChart3 } from "lucide-react";
+import { BarChart3, TrendingDown } from "lucide-react";
 
 const visualisations = [
   { title: "Paid Search Campaign Evaluation", slug: "paid-search-campaign", tag: "Tableau", icon: BarChart3 },
-  { title: "Visualisation 2", slug: "visualisation-2" },
+  { title: "Telco Monthly Churn Analysis", slug: "telco-churn-analysis", tag: "Tableau", icon: TrendingDown },
   { title: "Visualisation 3", slug: "visualisation-3" },
 ];
 
