@@ -35,6 +35,9 @@ const TelcoChurnAnalysis = () => {
           </Button>
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">Tableau</p>
           <h1 className="font-display text-4xl font-bold mb-6">Telco Monthly Churn Analysis</h1>
+          <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
+            An end-to-end churn analysis for a telecom operator, examining customer attrition patterns, segment behaviour, and risk drivers. This dashboard surfaces the segments most likely to leave and the factors that best predict churn, enabling proactive retention planning.
+          </p>
           <div
             ref={wrapperRef}
             className="w-full rounded-2xl overflow-hidden border border-border bg-secondary/30"
