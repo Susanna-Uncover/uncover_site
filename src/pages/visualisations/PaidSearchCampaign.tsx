@@ -35,8 +35,18 @@ const PaidSearchCampaign = () => {
           </Button>
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">Tableau</p>
           <h1 className="font-display text-4xl font-bold mb-6">Paid Search Campaign Evaluation</h1>
-          <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
+          <p className="text-muted-foreground leading-relaxed mb-4 max-w-3xl">
             Store X required a focused evaluation of paid search performance and profitability across Jul 2025 to Nov 2025. This dashboard distils the campaign's commercial efficiency, conversion mix, and financial return, highlighting where scale was achieved, where spend outpaced value, and which segments contributed most meaningfully to performance.
+          </p>
+          <p className="mb-8">
+            <a
+              href="https://public.tableau.com/views/Paidsearchcampaignevaluation-Jul2025-Nov2025/PaidSearchCampaignEvaluation?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline text-sm font-medium"
+            >
+              View full dashboard on Tableau Public →
+            </a>
           </p>
           <div
             ref={wrapperRef}
