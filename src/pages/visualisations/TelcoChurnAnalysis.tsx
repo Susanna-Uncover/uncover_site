@@ -35,8 +35,18 @@ const TelcoChurnAnalysis = () => {
           </Button>
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">Tableau</p>
           <h1 className="font-display text-4xl font-bold mb-6">Telco Monthly Churn Analysis</h1>
-          <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-            An end-to-end churn analysis for a telecom operator, examining customer attrition patterns, segment behaviour, and risk drivers. This dashboard surfaces the segments most likely to leave and the factors that best predict churn, enabling proactive retention planning.
+          <p className="text-muted-foreground leading-relaxed mb-4 max-w-3xl">
+            This Telco Monthly Churn Analysis was designed to identify the biggest retention risks across customer tenure, contract type, and service bundle. It highlights where churn is most concentrated, which segments generate the most revenue at risk, and where protective services could make the greatest difference.
+          </p>
+          <p className="mb-8">
+            <a
+              href="https://public.tableau.com/views/TelcoMonthlyChurnAnalysis-One-PageSummary/ChurnAnalysis-Telco?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline text-sm font-medium"
+            >
+              View full dashboard on Tableau Public →
+            </a>
           </p>
           <div
             ref={wrapperRef}
@@ -57,6 +67,24 @@ const TelcoChurnAnalysis = () => {
               }}
               allowFullScreen
             />
+          </div>
+
+          <div className="mt-10 max-w-3xl">
+            <h2 className="font-display text-2xl font-bold mb-4">Key findings</h2>
+            <ul className="space-y-4 text-muted-foreground leading-relaxed">
+              <li className="pl-4 border-l-2 border-primary/30">
+                <span className="text-primary font-semibold">Critical Window:</span> The first 12 months are the most critical retention window, with churn at 48% for customers in the 0–12 month tenure band, then steadily declining as tenure increases.
+              </li>
+              <li className="pl-4 border-l-2 border-primary/30">
+                <span className="text-primary font-semibold">Highest-Risk Contract:</span> Month-to-month customers are the highest-risk contract group, with churn at 43% and the largest revenue at risk at $121K.
+              </li>
+              <li className="pl-4 border-l-2 border-primary/30">
+                <span className="text-primary font-semibold">Service Gaps:</span> Customers without protective services are concentrated in the highest-risk segments, especially fibre optic users with no bundle.
+              </li>
+              <li className="pl-4 border-l-2 border-primary/30">
+                <span className="text-primary font-semibold">Revenue Leakage:</span> Churned customers generally cost more than retained customers across contract types, suggesting a clear revenue leakage tied to weaker customer stickiness.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
