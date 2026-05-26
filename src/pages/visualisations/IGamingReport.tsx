@@ -1,11 +1,33 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
 import Layout from "@/components/Layout";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url,
+).toString();
+
 const PDF_URL = `${import.meta.env.BASE_URL}igaming-report.pdf`;
 
 const IGamingReport = () => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [numPages, setNumPages] = useState(0);
+  const [width, setWidth] = useState(800);
+
+  useEffect(() => {
+    const update = () => {
+      if (wrapperRef.current) setWidth(wrapperRef.current.offsetWidth);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
     <Layout>
       <section className="section-padding pt-28 min-h-[70vh]">
@@ -31,13 +53,27 @@ const IGamingReport = () => {
               Open full PDF in new tab →
             </a>
           </p>
-          <div className="w-full rounded-2xl overflow-hidden border border-border bg-secondary/30">
-            <iframe
-              src={PDF_URL}
-              title="iGaming Performance Report"
-              className="w-full"
-              style={{ height: "80vh", border: 0 }}
-            />
+          <div
+            ref={wrapperRef}
+            className="w-full rounded-2xl overflow-hidden border border-border bg-secondary/30 p-4"
+          >
+            <Document
+              file={PDF_URL}
+              onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+              loading={<p className="text-muted-foreground p-8 text-center">Loading PDF…</p>}
+              error={<p className="text-muted-foreground p-8 text-center">Failed to load PDF.</p>}
+            >
+              {Array.from({ length: numPages }, (_, i) => (
+                <div key={i} className="mb-4 flex justify-center">
+                  <Page
+                    pageNumber={i + 1}
+                    width={Math.max(320, width - 32)}
+                    renderAnnotationLayer={false}
+                    renderTextLayer={false}
+                  />
+                </div>
+              ))}
+            </Document>
           </div>
         </div>
       </section>
