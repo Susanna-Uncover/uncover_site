@@ -16,6 +16,7 @@ import KMeansClustering from "./pages/portfolio/KMeansClustering";
 import OralClassification from "./pages/portfolio/OralClassification";
 import PaidSearchCampaign from "./pages/visualisations/PaidSearchCampaign";
 import TelcoChurnAnalysis from "./pages/visualisations/TelcoChurnAnalysis";
+import IGamingReport from "./pages/visualisations/IGamingReport";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/portfolio/oral-classification" element={<OralClassification />} />
           <Route path="/visualisations/paid-search-campaign" element={<PaidSearchCampaign />} />
           <Route path="/visualisations/telco-churn-analysis" element={<TelcoChurnAnalysis />} />
+          <Route path="/visualisations/igaming-report" element={<IGamingReport />} />
           <Route path="/portfolio/:slug" element={<ProjectDetail />} />
           <Route path="/visualisations/:slug" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
