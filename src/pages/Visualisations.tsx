@@ -5,7 +5,7 @@ import { BarChart3, TrendingUp, Gamepad2 } from "lucide-react";
 const visualisations = [
   { title: "Paid Search Campaign Evaluation", slug: "paid-search-campaign", tag: "Tableau", icon: BarChart3 },
   { title: "Telco Monthly Churn Analysis", slug: "telco-churn-analysis", tag: "Tableau", icon: TrendingUp },
-  { title: "iGaming Performance Report", slug: "igaming-report", tag: "Power BI", icon: Gamepad2 },
+  { title: "iGaming Player Base Analytics Report", slug: "igaming-report", tag: "Power BI", icon: Gamepad2 },
 ];
 
 const Visualisations = () => (

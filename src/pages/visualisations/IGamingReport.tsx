@@ -26,10 +26,21 @@ const IGamingReport = () => (
           </Link>
         </Button>
         <p className="text-primary text-sm font-medium tracking-widest uppercase mb-2">Power BI</p>
-        <h1 className="font-display text-4xl font-bold mb-6">iGaming Performance Report</h1>
-        <p className="text-muted-foreground leading-relaxed mb-4 max-w-3xl">
-          An iGaming performance report built in Power BI, exploring player activity, revenue trends and product engagement. Use the arrows to scroll through the pages.
-        </p>
+        <h1 className="font-display text-4xl font-bold mb-6">iGaming Player Base Analytics Report</h1>
+        <div className="text-muted-foreground leading-relaxed mb-8 max-w-3xl space-y-4">
+          <p>
+            This Player Base Analytics Report was designed to assess commercial performance and player quality across the acquisition channels. It shows which channels drive the most value, how effectively registrations convert into first-time depositors, and how player value is distributed across segments.
+          </p>
+          <div>
+            <p className="font-medium text-foreground mb-2">Key findings</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li><span className="font-medium text-foreground">Channel Value Concentration:</span> Brand and Organic channels generate the highest Total NGR, making them the strongest commercial acquisition sources.</li>
+              <li><span className="font-medium text-foreground">Healthy Conversion Performance:</span> The registration-to-conversion trend remains closely aligned over time, supported by an FTD Conversion Rate of 82%.</li>
+              <li><span className="font-medium text-foreground">High-Value Segment Dependence:</span> NGR is heavily concentrated in Champion and Loyal segments, indicating that a relatively small portion of the player base drives a disproportionate share of value.</li>
+              <li><span className="font-medium text-foreground">Lower-Band Deposit Weighting:</span> The deposit profile skews toward lower FTD bands, particularly £1–20, though a notable £250+ segment remains important from a value perspective.</li>
+            </ul>
+          </div>
+        </div>
         <p className="mb-8">
           <a
             href={PDF_URL}
